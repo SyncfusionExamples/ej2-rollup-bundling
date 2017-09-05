@@ -1,0 +1,23 @@
+{
+    "name": "ej2-rollup-demo",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "tsc -p ./tsconfig.json && npm run bundle",
+        "bundle": "gulp bundle",
+        "start": "npm run build && lite-server -c server.config.js"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "@syncfusion/ej2": "^1.0.15"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-rollup": "^2.14.0",
+        "lite-server": "^2.3.0",
+        "rollup": "^0.49.2",
+        "rollup-plugin-commonjs": "^8.2.0",
+        "rollup-plugin-node-resolve": "^3.0.0",
+        "rollup-plugin-uglify": "^2.0.1",
+        "typescript": "^2.5.2"
+    }
+}
