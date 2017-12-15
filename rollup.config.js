@@ -11,6 +11,11 @@ module.exports = {
         commonjs({
             include: 'node_modules/**'
         }),
+        {
+            transform(code, id) {
+                return code.replace(/\/\*\* @class \*\//g, "\/*@__PURE__*\/");
+            }
+        },
         uglify({
             compress: {
                 dead_code: true
